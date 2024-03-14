@@ -1,6 +1,6 @@
 # Wedding Website
 A beautiful, feature rich, device friendly wedding website.  
-_See [wedding.rampatra.com](http://wedding.rampatra.com/) for a demo. Use invite code `271117` to RSVP._
+_See [wedding.dhanakrithi.com](http://wedding.dhanakrithi.com/) for a demo. Use invite code `210424` to RSVP._
 
 # Highlights
 1. Slick and fully __responsive__ design.
@@ -15,7 +15,7 @@ _See [wedding.rampatra.com](http://wedding.rampatra.com/) for a demo. Use invite
    data.
 
 # Getting Started
-1. `$ git clone https://github.com/rampatra/wedding-website.git` - clone this project to your computer
+1. `$ git clone https://github.com/Devopsninjaa/Dhana-wedding-website.git` - clone this project to your computer
 2. `$ cd wedding-website` - go inside the project directory
 3. `$ npm install` - install dependencies
 4. `$ gulp` - compile sass to css, minify js, etc.
