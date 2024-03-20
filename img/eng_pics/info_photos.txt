@@ -1,0 +1,6 @@
+portide 
+lg - 1500*2247
+sm - 500*749
+landscape
+lg - 2247*1500
+sm - 749*500
