@@ -147,7 +147,7 @@ $(document).ready(function () {
 
     for (var i = 0; i < share_bar.length; i++) {
         var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandantara&amp;count=horizontal"' +
+            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=im_dhanasekar&amp;hashtags=DhanaKrithi&amp;count=horizontal"' +
             'style="width:105px; height:21px;">' +
             '</iframe>' +
 
@@ -184,23 +184,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Dhana and Krithi's Wedding",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Apr 20, 2024 19:00'),
 
             // Event duration (IN MINUTES)
-            // duration: 120,
+            // duration: 180,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Apr 21, 2024 10:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'JPM Mahal, JP Rd, Thendral Nagar, Sathuvachari, Vellore, Tamil Nadu 632009, India',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Raja Sankaralingam at +91 7200526322."
         }
     });
 
@@ -240,33 +240,33 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: location,
-        scrollwheel: false
-    });
+// function initMap() {
+//     var location = {lat: 22.5932759, lng: 88.27027720000001};
+//     var map = new google.maps.Map(document.getElementById('map-canvas'), {
+//         zoom: 15,
+//         center: location,
+//         scrollwheel: false
+//     });
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
+//     var marker = new google.maps.Marker({
+//         position: location,
+//         map: map
+//     });
 }
 
-function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: la_fiesta,
-        scrollwheel: false
-    });
+// function initBBSRMap() {
+//     var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+//     var map = new google.maps.Map(document.getElementById('map-canvas'), {
+//         zoom: 15,
+//         center: la_fiesta,
+//         scrollwheel: false
+//     });
 
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
-    });
-}
+//     var marker = new google.maps.Marker({
+//         position: la_fiesta,
+//         map: map
+//     });
+// }
 
 // alert_markup
 function alert_markup(alert_type, msg) {
