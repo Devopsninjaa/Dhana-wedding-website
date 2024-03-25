@@ -147,7 +147,11 @@ $(document).ready(function () {
 
     for (var i = 0; i < share_bar.length; i++) {
         var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
+<<<<<<< HEAD
             'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=im_dhanasekar&amp;hashtags=DhanaKrithi&amp;count=horizontal"' +
+=======
+            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=im_dhanasekar&amp;hashtags=dhanaKrithi&amp;count=horizontal"' +
+>>>>>>> c7f4a062afe25d52cd1a9ee180b2142b4c79321e
             'style="width:105px; height:21px;">' +
             '</iframe>' +
 
@@ -187,14 +191,22 @@ $(document).ready(function () {
             title: "Dhana and Krithi's Wedding",
 
             // Event start date
+<<<<<<< HEAD
             start: new Date('Apr 20, 2024 19:00'),
+=======
+            start: new Date('Apr 20, 2024 18:00'),
+>>>>>>> c7f4a062afe25d52cd1a9ee180b2142b4c79321e
 
             // Event duration (IN MINUTES)
             // duration: 180,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
+<<<<<<< HEAD
             end: new Date('Apr 21, 2024 10:00'),
+=======
+            end: new Date('Apr 21, 2024 09:00'),
+>>>>>>> c7f4a062afe25d52cd1a9ee180b2142b4c79321e
 
             // Event Address
             address: 'JPM Mahal, JP Rd, Thendral Nagar, Sathuvachari, Vellore, Tamil Nadu 632009, India',
@@ -214,8 +226,8 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+        if (MD5($('#invite_code').val()) !== 'cf08ec7aced6814b1c579fc859392791'
+            && MD5($('#invite_code').val()) !== 'bb3557401d3a929df8a30c23b9fc1c04') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
