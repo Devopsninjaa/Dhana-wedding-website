@@ -137,45 +137,28 @@ $(document).ready(function () {
     });
 
     /********************** Social Share buttons ***********************/
-    // Function to handle potential errors during library loading
-    function handleError(error) {
-      console.error("Error loading social share library:", error);
-    }
-    
-    // Function to create and insert social share buttons
-    function createShareBar(shareBarElement) {
-      const hashtags = 'DhanaKrithi';  // Replace with your desired hashtags
-      const tweetText = encodeURIComponent(document.title);  // Use page title for tweet text
-      const url = encodeURIComponent(window.location.href);
-      const viaUsername = 'im_dhanasekar';  // Replace with your Twitter username
-    
-      const twitterUrl = `https://twitter.com/intent/tweet?hashtags=${hashtags}&text=${tweetText}&url=${url}&via=${viaUsername}`;
-      const facebookUrl = `https://www.facebook.com/plugins/like.php?href=${encodeURIComponent(window.location.href)}&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=YOUR_FACEBOOK_APP_ID&width=150`;
-    
-      const html = `
-        <a href="${twitterUrl}" class="twitter-share-button" data-show-count="false">Tweet</a>
-        <iframe src="${facebookUrl}" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
-        `;
-    
-      shareBarElement.innerHTML = html;
-      shareBarElement.style.display = 'inline-block';
-    }
-    
-    // Load Twitter library asynchronously with error handling
+    var share_bar = document.getElementsByClassName('share-bar');
     var po = document.createElement('script');
     po.type = 'text/javascript';
     po.async = true;
     po.src = 'https://apis.google.com/js/platform.js';
-    po.onerror = handleError;  // Add error handler
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(po, s);
-    
-    // Get all share-bar elements
-    var shareBars = document.querySelectorAll('.share-bar');
-    
-    // Loop through share bars and create buttons
-    for (var i = 0; i < shareBars.length; i++) {
-      createShareBar(shareBars[i]);
+
+    for (var i = 0; i < share_bar.length; i++) {
+        var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
+            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=im_dhanasekar&amp;hashtags=DhanaKrithi&amp;count=horizontal"' +
+            'style="width:105px; height:21px;">' +
+            '</iframe>' +
+
+            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
+
+            '<div class="g-plusone" data-size="medium"></div>';
+
+        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
+
+        share_bar[i].innerHTML = html;
+        share_bar[i].style.display = 'inline-block';
     }
 
     /********************** Embed youtube video *********************/
