@@ -137,33 +137,49 @@ $(document).ready(function () {
     });
 
     /********************** Social Share buttons ***********************/
-    var share_bar = document.getElementsByClassName('share-bar');
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
 
-    for (var i = 0; i < share_bar.length; i++) {
-        var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-<<<<<<< HEAD
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=im_dhanasekar&amp;hashtags=DhanaKrithi&amp;count=horizontal"' +
-=======
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=im_dhanasekar&amp;hashtags=dhanaKrithi&amp;count=horizontal"' +
->>>>>>> c7f4a062afe25d52cd1a9ee180b2142b4c79321e
-            'style="width:105px; height:21px;">' +
-            '</iframe>' +
-
-            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
-
-            '<div class="g-plusone" data-size="medium"></div>';
-
-        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
-
-        share_bar[i].innerHTML = html;
-        share_bar[i].style.display = 'inline-block';
-    }
+    /********************** Social Share buttons ***********************/
+    // Function to handle potential errors during library loading
+function handleError(error) {
+    console.error("Error loading social share library:", error);
+  }
+  
+  // Function to create and insert social share buttons
+  // Function to handle potential errors during library loading
+function handleError(error) {
+    console.error("Error loading social share library:", error);
+  }
+  
+  // Function to create and insert social share buttons
+  function createShareBar(shareBarElement) {
+    const twitterUrl = `https://twitter.com/intent/tweet?hashtags=ramandantara&text=${encodeURIComponent(document.title)}&url=${encodeURIComponent(window.location.href)}&via=ramswarooppatra`;
+    const facebookUrl = `https://www.facebook.com/plugins/like.php?href=${encodeURIComponent(window.location.href)}&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=YOUR_FACEBOOK_APP_ID&width=150`;
+  
+    const html = `
+      <a href="${twitterUrl}" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <iframe src="${facebookUrl}" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      `;
+  
+    shareBarElement.innerHTML = html;
+    shareBarElement.style.display = 'inline-block';
+  }
+  
+  // Load Twitter library asynchronously with error handling
+  var po = document.createElement('script');
+  po.type = 'text/javascript';
+  po.async = true;
+  po.src = 'https://apis.google.com/js/platform.js';
+  po.onerror = handleError;  // Add error handler
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(po, s);
+  
+  // Get all share-bar elements
+  var shareBars = document.querySelectorAll('.share-bar');
+  
+  // Loop through share bars and create buttons
+  for (var i = 0; i < shareBars.length; i++) {
+    createShareBar(shareBars[i]);
+  }  
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
@@ -188,31 +204,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Dhana and Krithi's Wedding",
+            title: "Ram and Antara's Wedding",
 
             // Event start date
-<<<<<<< HEAD
-            start: new Date('Apr 20, 2024 19:00'),
-=======
-            start: new Date('Apr 20, 2024 18:00'),
->>>>>>> c7f4a062afe25d52cd1a9ee180b2142b4c79321e
+            start: new Date('Nov 27, 2017 10:00'),
 
             // Event duration (IN MINUTES)
-            // duration: 180,
+            // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-<<<<<<< HEAD
-            end: new Date('Apr 21, 2024 10:00'),
-=======
-            end: new Date('Apr 21, 2024 09:00'),
->>>>>>> c7f4a062afe25d52cd1a9ee180b2142b4c79321e
+            end: new Date('Nov 29, 2017 00:00'),
 
             // Event Address
-            address: 'JPM Mahal, JP Rd, Thendral Nagar, Sathuvachari, Vellore, Tamil Nadu 632009, India',
+            address: 'ITC Fortune Park Hotel, Kolkata',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Raja Sankaralingam at +91 7200526322."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
         }
     });
 
@@ -226,11 +234,11 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'cf08ec7aced6814b1c579fc859392791'
-            && MD5($('#invite_code').val()) !== 'bb3557401d3a929df8a30c23b9fc1c04') {
+        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
+            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
+           $.post('https://script.google.com/macros/s/AKfycbyuNkZtbWsdZ2FMLkKl7ljvxByLMUsjcDhpUVOyfqtGNsNfM8_PjpbAmoClm1n05VNq/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -252,33 +260,33 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-// function initMap() {
-//     var location = {lat: 22.5932759, lng: 88.27027720000001};
-//     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-//         zoom: 15,
-//         center: location,
-//         scrollwheel: false
-//     });
+function initMap() {
+    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: location,
+        scrollwheel: false
+    });
 
-//     var marker = new google.maps.Marker({
-//         position: location,
-//         map: map
-//     });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
 }
 
-// function initBBSRMap() {
-//     var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
-//     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-//         zoom: 15,
-//         center: la_fiesta,
-//         scrollwheel: false
-//     });
+function initBBSRMap() {
+    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: la_fiesta,
+        scrollwheel: false
+    });
 
-//     var marker = new google.maps.Marker({
-//         position: la_fiesta,
-//         map: map
-//     });
-// }
+    var marker = new google.maps.Marker({
+        position: la_fiesta,
+        map: map
+    });
+}
 
 // alert_markup
 function alert_markup(alert_type, msg) {
