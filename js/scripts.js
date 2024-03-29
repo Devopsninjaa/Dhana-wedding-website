@@ -137,49 +137,42 @@ $(document).ready(function () {
     });
 
     /********************** Social Share buttons ***********************/
-
-    /********************** Social Share buttons ***********************/
     // Function to handle potential errors during library loading
-function handleError(error) {
-    console.error("Error loading social share library:", error);
-  }
-  
-  // Function to create and insert social share buttons
-  // Function to handle potential errors during library loading
-function handleError(error) {
-    console.error("Error loading social share library:", error);
-  }
-  
-  // Function to create and insert social share buttons
-  function createShareBar(shareBarElement) {
-    const twitterUrl = `https://twitter.com/intent/tweet?hashtags=Dhanakrithi&text=${encodeURIComponent(document.title)}&url=${encodeURIComponent(window.location.href)}&via=im_dhanasekar`;
-    const facebookUrl = `https://www.facebook.com/plugins/like.php?href=${encodeURIComponent(window.location.href)}&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=YOUR_FACEBOOK_APP_ID&width=150`;
-  
-    const html = `
-      <a href="${twitterUrl}" class="twitter-share-button" data-show-count="false">Tweet</a>
-      <iframe src="${facebookUrl}" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
-      `;
-  
-    shareBarElement.innerHTML = html;
-    shareBarElement.style.display = 'inline-block';
-  }
-  
-  // Load Twitter library asynchronously with error handling
-  var po = document.createElement('script');
-  po.type = 'text/javascript';
-  po.async = true;
-  po.src = 'https://apis.google.com/js/platform.js';
-  po.onerror = handleError;  // Add error handler
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(po, s);
-  
-  // Get all share-bar elements
-  var shareBars = document.querySelectorAll('.share-bar');
-  
-  // Loop through share bars and create buttons
-  for (var i = 0; i < shareBars.length; i++) {
-    createShareBar(shareBars[i]);
-  }  
+    function handleError(error) {
+      console.error("Error loading social share library:", error);
+    }
+    
+    // Function to create and insert social share buttons
+    function createShareBar(shareBarElement) {
+      const twitterUrl = `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent('DhanaKrithi')}&text=${encodeURIComponent(document.title)}&url=${encodeURIComponent(window.location.href)}&via=${encodeURIComponent('im_dhanasekar')}`;
+      const facebookUrl = `https://www.facebook.com/plugins/like.php?href=${encodeURIComponent(window.location.href)}&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=YOUR_FACEBOOK_APP_ID&width=150`;
+    
+      const html = `
+        <a href="${twitterUrl}" class="twitter-share-button" data-show-count="false">Tweet</a>
+        <iframe src="${facebookUrl}" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+        `;
+    
+      shareBarElement.innerHTML = html;
+      shareBarElement.style.display = 'inline-block';
+    }
+    
+    // Load Twitter library asynchronously with error handling
+    var po = document.createElement('script');
+    po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    po.onerror = handleError;  // Add error handler
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+    
+    // Get all share-bar elements
+    var shareBars = document.querySelectorAll('.share-bar');
+    
+    // Loop through share bars and create buttons
+    for (var i = 0; i < shareBars.length; i++) {
+      createShareBar(shareBars[i]);
+    }
+
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
