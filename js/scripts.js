@@ -144,7 +144,12 @@ $(document).ready(function () {
     
     // Function to create and insert social share buttons
     function createShareBar(shareBarElement) {
-      const twitterUrl = `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent('DhanaKrithi')}&text=${encodeURIComponent(document.title)}&url=${encodeURIComponent(window.location.href)}&via=${encodeURIComponent('im_dhanasekar')}`;
+      const hashtags = 'DhanaKrithi';  // Replace with your desired hashtags
+      const tweetText = encodeURIComponent(document.title);  // Use page title for tweet text
+      const url = encodeURIComponent(window.location.href);
+      const viaUsername = 'im_dhanasekar';  // Replace with your Twitter username
+    
+      const twitterUrl = `https://twitter.com/intent/tweet?hashtags=${hashtags}&text=${tweetText}&url=${url}&via=${viaUsername}`;
       const facebookUrl = `https://www.facebook.com/plugins/like.php?href=${encodeURIComponent(window.location.href)}&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=YOUR_FACEBOOK_APP_ID&width=150`;
     
       const html = `
@@ -172,7 +177,6 @@ $(document).ready(function () {
     for (var i = 0; i < shareBars.length; i++) {
       createShareBar(shareBars[i]);
     }
-
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
