@@ -152,7 +152,7 @@ function handleError(error) {
   
   // Function to create and insert social share buttons
   function createShareBar(shareBarElement) {
-    const twitterUrl = `https://twitter.com/intent/tweet?hashtags=ramandantara&text=${encodeURIComponent(document.title)}&url=${encodeURIComponent(window.location.href)}&via=ramswarooppatra`;
+    const twitterUrl = `https://twitter.com/intent/tweet?hashtags=Dhanakrithi&text=${encodeURIComponent(document.title)}&url=${encodeURIComponent(window.location.href)}&via=im_dhanasekar`;
     const facebookUrl = `https://www.facebook.com/plugins/like.php?href=${encodeURIComponent(window.location.href)}&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=YOUR_FACEBOOK_APP_ID&width=150`;
   
     const html = `
