@@ -184,23 +184,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Dhana and Krithi's Wedding",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Apr 20, 2024 18:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Apr 21, 2024 09:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'JPM Mahal, Vellore',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Raja Sankaralingam at +91 7200526322."
         }
     });
 
@@ -218,7 +218,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== 'bb3557401d3a929df8a30c23b9fc1c04') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycby0IMiFXL2sSr4mB6rbF9bVmo2KEQLRJguT2Q6gxQ8tcE01nSPeavAa787kz7yRKaQqUQ/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwRkViUylp4qtdHWXQMhnYA_EhC_uhnLcdttKRoBVMerxUQgCaX-I5mxWJnzIWxoHLyTw/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
