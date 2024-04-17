@@ -68,55 +68,55 @@ $(document).ready(function () {
     /***************** Tooltips ******************/
     $('[data-toggle="tooltip"]').tooltip();
 
-    // /***************** Nav Transformicon ******************/
+    /***************** Nav Transformicon ******************/
 
-    // /* When user clicks the Icon */
-    // $('.nav-toggle').click(function () {
-    //     $(this).toggleClass('active');
-    //     $('.header-nav').toggleClass('open');
-    //     event.preventDefault();
-    // });
-    // /* When user clicks a link */
-    // $('.header-nav li a').click(function () {
-    //     $('.nav-toggle').toggleClass('active');
-    //     $('.header-nav').toggleClass('open');
+    /* When user clicks the Icon */
+    $('.nav-toggle').click(function () {
+        $(this).toggleClass('active');
+        $('.header-nav').toggleClass('open');
+        event.preventDefault();
+    });
+    /* When user clicks a link */
+    $('.header-nav li a').click(function () {
+        $('.nav-toggle').toggleClass('active');
+        $('.header-nav').toggleClass('open');
 
-    // });
+    });
 
-    // /***************** Header BG Scroll ******************/
+    /***************** Header BG Scroll ******************/
 
-    // $(function () {
-    //     $(window).scroll(function () {
-    //         var scroll = $(window).scrollTop();
+    $(function () {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
 
-    //         if (scroll >= 20) {
-    //             $('section.navigation').addClass('fixed');
-    //             $('header').css({
-    //                 "border-bottom": "none",
-    //                 "padding": "35px 0"
-    //             });
-    //             $('header .member-actions').css({
-    //                 "top": "26px",
-    //             });
-    //             $('header .navicon').css({
-    //                 "top": "34px",
-    //             });
-    //         } else {
-    //             $('section.navigation').removeClass('fixed');
-    //             $('header').css({
-    //                 "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)",
-    //                 "padding": "50px 0"
-    //             });
-    //             $('header .member-actions').css({
-    //                 "top": "41px",
-    //             });
-    //             $('header .navicon').css({
-    //                 "top": "48px",
-    //             });
-    //         }
-    //     });
-    // });
-    // /***************** Smooth Scrolling ******************/
+            if (scroll >= 20) {
+                $('section.navigation').addClass('fixed');
+                $('header').css({
+                    "border-bottom": "none",
+                    "padding": "35px 0"
+                });
+                $('header .member-actions').css({
+                    "top": "26px",
+                });
+                $('header .navicon').css({
+                    "top": "34px",
+                });
+            } else {
+                $('section.navigation').removeClass('fixed');
+                $('header').css({
+                    "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)",
+                    "padding": "50px 0"
+                });
+                $('header .member-actions').css({
+                    "top": "41px",
+                });
+                $('header .navicon').css({
+                    "top": "48px",
+                });
+            }
+        });
+    });
+    /***************** Smooth Scrolling ******************/
 
     $(function () {
 
@@ -153,7 +153,7 @@ $(document).ready(function () {
 
             '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
 
-            // '<div class="g-plusone" data-size="medium"></div>';
+            '<div class="g-plusone" data-size="medium"></div>';
 
         // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
 
@@ -165,15 +165,15 @@ $(document).ready(function () {
     $('.player').YTPlayer();
 
 
-    // /********************** Toggle Map Content **********************/
-    // $('#btn-show-map').click(function () {
-    //     $('#map-content').toggleClass('toggle-map-content');
-    //     $('#btn-show-content').toggleClass('toggle-map-content');
-    // });
-    // $('#btn-show-content').click(function () {
-    //     $('#map-content').toggleClass('toggle-map-content');
-    //     $('#btn-show-content').toggleClass('toggle-map-content');
-    // });
+    /********************** Toggle Map Content **********************/
+    $('#btn-show-map').click(function () {
+        $('#map-content').toggleClass('toggle-map-content');
+        $('#btn-show-content').toggleClass('toggle-map-content');
+    });
+    $('#btn-show-content').click(function () {
+        $('#map-content').toggleClass('toggle-map-content');
+        $('#btn-show-content').toggleClass('toggle-map-content');
+    });
 
     /********************** Add to Calendar **********************/
     var myCalendar = createCalendar({
